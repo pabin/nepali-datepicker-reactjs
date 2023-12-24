@@ -111,15 +111,7 @@ const NepaliDatePicker: FunctionComponent<INepaliDatePicker> = (props) => {
 
     return (
         <div ref={nepaliDatePickerWrapper} className={`nepali-date-picker ${className}`}>
-            <input
-                type='text'
-                ref={nepaliDatePickerInput}
-                className={inputClassName}
-                readOnly={true}
-                value={numberTrans(date)}
-                onClick={() => setShowCalendar((visible) => !visible)}
-            />
-            {showCalendar && date && <Calender value={date} events={datepickerEvents} />}
+            {date && <Calender value={date} events={datepickerEvents} />}
         </div>
     )
 }
